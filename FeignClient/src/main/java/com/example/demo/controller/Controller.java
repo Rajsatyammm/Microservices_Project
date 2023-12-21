@@ -15,12 +15,12 @@ public class Controller {
 	@Autowired
 	private IEmployeeDetails empDetails;
 	
-	@GetMapping("/add")
-	public void getDetails(@RequestParam String name, @RequestParam String email, @RequestParam Float sal,
-			@RequestParam String eddr) {
+	@GetMapping("/add-emp")
+	public String getDetails(@RequestParam Integer eid, @RequestParam String name, @RequestParam String email, @RequestParam Float sal,
+			@RequestParam String eaddr) {
 		System.out.println(":::: Inside the feign client controller....");
-		empDetails.addEmployee(name, email, sal, eddr);
 		System.out.println("::::: after call...");
+		return empDetails.addEmp(eid, name, email, sal, eaddr);
 	}
 	
 }

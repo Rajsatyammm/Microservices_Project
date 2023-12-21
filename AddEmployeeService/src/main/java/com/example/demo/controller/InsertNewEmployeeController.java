@@ -17,9 +17,10 @@ public class InsertNewEmployeeController {
 	private EmployeeRepository employeeRepository;
 
 	@GetMapping("/add")
-	public String addEmployee(@RequestParam String name, @RequestParam String email, @RequestParam Float sal, @RequestParam String address) {
+	public String addEmployee(@RequestParam Integer eid, @RequestParam String name, @RequestParam String email, @RequestParam Float sal, @RequestParam String address) {
 		Employee employee = new Employee();
 		
+		employee.setEid(eid);
 		employee.setEadd(address);
 		employee.setEname(name);
 		employee.setEmail(email);
