@@ -7,37 +7,65 @@ import jakarta.persistence.Id;
 public class Employee {
 
 	@Id
-	private Long id;
-	private String name;
-	private double salary;
+	private Integer eid;
+	private String ename;
+	private Float esal;
+	private String eadd;
+	private String email;
+	private String role;
 
-	public Long getId() {
-		return id;
+	public Integer getEid() {
+		return eid;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setEid(Integer eid) {
+		this.eid = eid;
 	}
 
-	public String getName() {
-		return name;
+	public String getEname() {
+		return ename;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setEname(String ename) {
+		this.ename = ename;
 	}
 
-	public double getSalary() {
-		return salary;
+	public double getEsal() {
+		return esal;
 	}
 
-	public void setSalary(double salary) {
-		this.salary = salary;
+	public void setEsal(Float esal) {
+		this.esal = esal;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getEadd() {
+		return eadd;
+	}
+
+	public void setEadd(String eadd) {
+		this.eadd = eadd;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
 	}
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + "]";
+		return "Employee [eid=" + eid + ", ename=" + ename + ", esal=" + esal + ", email=" + email + ", eadd=" + eadd
+				+ ", role=" + role + "]";
 	}
 
 }
