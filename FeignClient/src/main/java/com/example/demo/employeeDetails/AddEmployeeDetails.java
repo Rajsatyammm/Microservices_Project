@@ -8,10 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface AddEmployeeDetails {
 
 	@GetMapping("/employees/add")
-	public String addEmp(@RequestParam Integer eid, @RequestParam String name, @RequestParam String email,
-			@RequestParam Float sal, @RequestParam String address);
-	
-	@GetMapping("/employees/delete")
-	public String delEmp(@RequestParam Integer eid);
+	public String addEmp(@RequestParam String name, @RequestParam String email, @RequestParam Float sal,
+			@RequestParam String addr);
 
 }

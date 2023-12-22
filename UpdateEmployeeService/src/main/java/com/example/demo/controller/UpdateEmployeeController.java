@@ -17,15 +17,17 @@ public class UpdateEmployeeController {
 	private EmployeeRepository employeeRepository;
 
 	@GetMapping("/update")
-	public String updateEmployee(@RequestParam Integer id, @RequestParam String name, @RequestParam String email, @RequestParam Float sal, @RequestParam String addr) {
+	public String updateEmployee(@RequestParam Integer eid, @RequestParam String name, @RequestParam String email, @RequestParam Float sal, @RequestParam String addr) {
 
-		if (id != null && employeeRepository.existsById(id)) {
-			Employee existingEmployee = employeeRepository.findById(id).orElse(null);
+		if (eid != null && employeeRepository.existsById(eid)) {
+			Employee existingEmployee = employeeRepository.findById(eid).orElse(null);
+			
 			if (existingEmployee != null) {
 				existingEmployee.setEadd(addr);
 				existingEmployee.setEmail(email);
 				existingEmployee.setEname(name);
 				existingEmployee.setEsal(sal);
+				
 				employeeRepository.save(existingEmployee);
 				return "Employee updated successfully";
 			}

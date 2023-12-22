@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+ package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,11 +17,10 @@ public class InsertNewEmployeeController {
 	private EmployeeRepository employeeRepository;
 
 	@GetMapping("/add")
-	public String addEmployee(@RequestParam Integer eid, @RequestParam String name, @RequestParam String email, @RequestParam Float sal, @RequestParam String address) {
+	public String addEmployee(@RequestParam String name, @RequestParam String email, @RequestParam Float sal, @RequestParam String addr) {
 		Employee employee = new Employee();
 		
-		employee.setEid(eid);
-		employee.setEadd(address);
+		employee.setEadd(addr);
 		employee.setEname(name);
 		employee.setEmail(email);
 		employee.setEsal(sal);

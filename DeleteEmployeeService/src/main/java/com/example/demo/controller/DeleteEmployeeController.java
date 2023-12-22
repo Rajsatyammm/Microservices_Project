@@ -16,9 +16,9 @@ public class DeleteEmployeeController {
     private EmployeeRepository employeeRepository;
 
     @GetMapping("/delete")
-    public String deleteEmployee(@RequestParam Integer id) {
-        if (employeeRepository.existsById(id)) {
-            employeeRepository.deleteById(id); 
+    public String deleteEmployee(@RequestParam Integer eid) {
+        if (employeeRepository.existsById(eid)) {
+            employeeRepository.deleteById(eid); 
             return "Employee deleted successfully";
         } else {
             return "Employee not found";
