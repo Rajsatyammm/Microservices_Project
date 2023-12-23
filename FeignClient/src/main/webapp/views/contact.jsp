@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>inside add.jsp</h2>
+	<h1> Contact us page</h1>
 </body>
 </html>
