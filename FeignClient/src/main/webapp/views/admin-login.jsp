@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -136,7 +137,7 @@ input{
             <p>
                 Welcome back! Please enter your credentials to access your account.
             </p>
-             <form>
+             <form action="/submit-admin-form" method="get">
                  Admin ID:
                  <input type="text" name="EmpId">
                  Admin Password :

@@ -8,5 +8,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface DeleteEmployeeDetails {
 	
 	@GetMapping("/employees/delete")
-	public String delEmp(@RequestParam Integer eid);
+	public void delEmp(@RequestParam Integer eid);
 }

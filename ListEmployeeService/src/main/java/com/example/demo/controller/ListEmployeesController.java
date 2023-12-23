@@ -24,7 +24,6 @@ public class ListEmployeesController {
 		return employeeRepository.findAll();
 	}
 
-	
 	@GetMapping("/list/{eid}")
 	public Employee getById(@PathVariable Integer eid) {
 		
