@@ -25,6 +25,31 @@ public class HomeController {
 		return "index";
 	}
 
+	@GetMapping("/contact")
+	public String contactUs() {
+		return "contact";
+	}
+
+	@GetMapping("/about")
+	public String aboutUs() {
+		return "about";
+	}
+
+	@PostMapping("/getintouch")
+	public String submitContactUSPage() {
+		return "getInTouch";
+	}
+
+	@GetMapping("/logout")
+	public String logout() {
+		return "index";
+	}
+
+	@GetMapping("/employee-login")
+	public String employeeLogin() {
+		return "employee-login";
+	}
+
 	@GetMapping("/admin/add")
 	public String addEmployee() {
 		return "addEmployee";
@@ -40,24 +65,9 @@ public class HomeController {
 		return "deleteEmployee";
 	}
 
-	@GetMapping("/employee-login")
-	public String employeeLogin() {
-		return "employee-login";
-	}
-
 	@GetMapping("/admin-login")
 	public String adminLogin() {
 		return "admin-login";
-	}
-
-	@GetMapping("/contact")
-	public String contactUs() {
-		return "contact";
-	}
-
-	@GetMapping("/about")
-	public String aboutUs() {
-		return "about";
 	}
 
 	@GetMapping("/admin/dashboard")
@@ -92,13 +102,4 @@ public class HomeController {
 		return modelAndView;
 	}
 
-	@PostMapping("/getintouch")
-	public String submitContactUSPage() {
-		return "getInTouch";
-	}
-
-	@GetMapping("/logout")
-	public String logout() {
-		return "index";
-	}
 }

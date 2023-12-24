@@ -28,7 +28,6 @@ public class InsertNewEmployeeController {
 		employee.setRole("EMPLOYEE");
 
 		employeeRepository.save(employee);
-		System.out.println("InsertNewEmployeeController.addEmployee()......");
-		return "Employee added successfully";
+		return "success";
 	}
 }

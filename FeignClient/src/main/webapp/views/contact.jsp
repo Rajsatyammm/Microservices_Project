@@ -2,22 +2,18 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    
+
 </head>
 <body>
 
-<div >
+<div class="navbar">
     <a href="/">Home</a>
     <a href="about">About Us</a>
     <a href="employee-login">Employee Login</a>
     <a href="admin-login">Admin Login</a>
 </div>
 
-<div>
+<div class="contact-container">
     <h2>Contact Us</h2>
     <form class="contact-form" action="/getintouch" method="post">
         <input type="text" name="name" placeholder="Your Name" required>

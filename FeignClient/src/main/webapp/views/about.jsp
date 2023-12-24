@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Us</title>
+
 </head>
 <body>
 
@@ -16,19 +17,16 @@
 		<a href="admin-login">Admin Login</a>
 	</div>
 
-	<div>
+	<div class="about-container">
 		<h2>About Us</h2>
-		<div >
-			<p>Welcome to our company! We are a dedicated team committed to
-				providing high-quality services. Lorem ipsum dolor sit amet,
-				consectetur adipiscing elit. Sed tincidunt, metus quis ultrices
-				interdum, libero odio fringilla odio, ac tincidunt est justo a
-				risus.</p>
-			<p>Nulla facilisi. Vivamus luctus mi id vestibulum feugiat. Sed
-				eu semper metus. Phasellus ut facilisis nibh. Quisque id dui id
-				nulla ullamcorper accumsan eget eu nisl.</p>
+		<div class="about-content">
+			
 		</div>
 	</div>
+	
+	<footer>
+		<p>&copy; 2023 @Satyam-Raj Employee Management System. All rights reserved.</p>
+	</footer>
 
 </body>
 </html>

@@ -10,7 +10,7 @@
 </head>
 <body>
 
-	<div>
+	<div class="navbar">
 		<a href="/">Home</a> 
 		<a href="contact">Contact Us</a>
 		<a href="about">About Us</a>
@@ -19,7 +19,7 @@
 
 	<div class="login-container">
 		<h2>Admin Login</h2>
-		<form action="/login-controller" method="post">
+		<form class="login-form" action="/login-controller" method="post">
 			<input type="number" name="eid" placeholder="Admin ID" required>
 			<input type="text" name="ename" placeholder="Name" required>
 			<input type="email" name="email" placeholder="Email" required>

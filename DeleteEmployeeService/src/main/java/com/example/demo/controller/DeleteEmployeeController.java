@@ -19,9 +19,9 @@ public class DeleteEmployeeController {
     public String deleteEmployee(@RequestParam Integer eid) {
         if (employeeRepository.existsById(eid)) {
             employeeRepository.deleteById(eid); 
-            return "Employee deleted successfully";
+            return "success";
         } else {
-            return "Employee not found";
+            return "failure";
         }
     }
 }
