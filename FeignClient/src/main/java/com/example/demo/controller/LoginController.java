@@ -4,7 +4,6 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -33,7 +32,6 @@ public class LoginController {
 				emp = optEmp.get();
 			}
 		} else {
-			System.out.println("No employee found with id :: " + eid);
 			return "admin-login";
 		}
 
@@ -53,6 +51,8 @@ public class LoginController {
 
 			if ("ADMIN".equals(user.getRole())) {
 				return "crud-pages";
+			} else if ("EMPLOYEE".equals(user.getRole())) {
+				return "welcome";
 			} else {
 				return "admin-login";
 			}
@@ -62,9 +62,5 @@ public class LoginController {
 
 	}
 
-	@GetMapping("/logout")
-	public String logout() {
-		userSession.setUser(null);
-		return "logout";
-	}
+	
 }

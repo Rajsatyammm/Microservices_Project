@@ -10,11 +10,11 @@
 
 </head>
 <body>
-	<form action="/employees/del-emp" method="post">
-		<h2>Delete Employee</h2>
+	<form action="/admin/list" method="post">
+		<h2>Get Employee by ID</h2>
 		<label for="eid">Employee ID:</label> 
 		<input type="number" id="eid" name="eid" required>
-		<button type="submit">Delete</button>
+		<button type="submit">Get</button>
 	</form>
 </body>
 </html>

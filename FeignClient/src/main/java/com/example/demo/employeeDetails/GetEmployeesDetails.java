@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import com.example.demo.model.Employee;
 
 @FeignClient("LIST-EMPLOYEE-SERVICE")
-public interface GetAllEmployeesDetails {
+public interface GetEmployeesDetails {
 
 	@GetMapping("/employees/list")
 	public List<Employee> getEmployeeList();
