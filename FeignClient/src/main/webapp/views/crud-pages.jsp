@@ -99,7 +99,7 @@ footer {
 			src="NEC_Corporation_India2022061412400620220614124939-removebg-preview.png"
 			alt="Company Logo" class="logo">
 		<nav>
-			<a href="/">Home</a> <a href="/employees/addEmp">Add Employee</a> <a
+			<a href="/">Home</a> <a href="/employees/add">Add Employee</a> <a
 				href="/employees/update">Update Employee Detail</a> <a href="/employees/delete">Delete
 				Employee </a> <a href="/employees/list-all">Display all Employee</a>
 		</nav>

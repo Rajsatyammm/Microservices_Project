@@ -136,11 +136,10 @@ input{
             <p>
                 Welcome back! Please enter your credentials to access your account.
             </p>
-             <form>
-                 Employee ID:
-                 <input type="text" name="EmpId">
-                 Employee Password :
-                 <input type="text" name="EmpPass">
+             <form action="/login-controller" method="post">
+                 Employee ID: <input type="number" name="eid">
+                 Employee Name : <input type="text" name="ename">
+                 Employee email : <input type="text" name="email">
                  <div id="submit">
                      <input type="submit">
                  </div>

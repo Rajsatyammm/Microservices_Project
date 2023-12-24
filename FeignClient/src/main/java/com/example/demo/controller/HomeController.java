@@ -2,6 +2,9 @@ package com.example.demo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+
+import com.example.demo.model.User;
 
 @Controller
 public class HomeController {
@@ -11,19 +14,22 @@ public class HomeController {
 		return "index";
 	}
 
-	@GetMapping("/employees/addEmp")
+	@GetMapping("/employees/add")
 	public String addEmployee() {
 		return "addEmployee";
 	}
 
 	@GetMapping("/employees/update")
 	public String updateEmployee() {
-		return "updateEmp";
+		return "updateEmployee";
 	}
 
 	@GetMapping("/employees/delete")
-	public String deleteEmployee() {
-		return "deleteEmp";
+	public String deleteEmployee(@ModelAttribute("employee") User employee) {
+		if ("ADMIN".equals(employee.getRole())) {
+			return "deleteEmployee";
+		}
+		return "admin-login";
 	}
 
 	@GetMapping("/employee-login")
@@ -46,20 +52,12 @@ public class HomeController {
 		return "about";
 	}
 
-	@GetMapping("/adminn")
-	public String loadCRUDjsp() {
-		// admin data is present inside the request object
-		String data = "";
-		if ("data".equals(data)) {
+	@GetMapping("/admin/dashboard")
+	public String loadCRUDjsp(@ModelAttribute("employee") User employee) {
+		if ("ADMIN".equals(employee.getRole())) {
 			return "crud-pages";
 		}
 		return "admin-login";
-	}
-
-	@GetMapping()
-	public String checkDetails() {
-		String id = "";
-		return id;
 	}
 
 }

@@ -130,9 +130,9 @@ button {
 			src="NEC_Corporation_India2022061412400620220614124939-removebg-preview.png"
 			alt="Company Logo" class="logo">
 		<nav>
-			<a href="home.html">Home</a> <a href="#add">Add Employee</a> <a
-				href="#update">Update Employee Detail</a> <a href="#delete">Delete
-				Employee </a> <a href="#alldisplay">Display all Employee</a>
+			<a href="/">Home</a> <a href="/employees/add">Add Employee</a> <a
+				href="/employees/update">Update Employee Detail</a> <a href="/employees/delete">Delete
+				Employee </a> <a href="/employees/list-all">Display all Employee</a>
 		</nav>
 	</header>
 	<div class="hero">

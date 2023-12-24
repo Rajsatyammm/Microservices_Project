@@ -137,11 +137,10 @@ input{
             <p>
                 Welcome back! Please enter your credentials to access your account.
             </p>
-             <form action="/submit-admin-form" method="get">
-                 Admin ID:
-                 <input type="text" name="EmpId">
-                 Admin Password :
-                 <input type="text" name="EmpPass">
+             <form action="/login-controller" method="post">
+                 Admin ID: <input type="number" name="eid">
+                 Admin Name : <input type="text" name="ename">
+                 Admin email : <input type="text" name="email">
                  <div id="submit">
                      <input type="submit">
                  </div>
