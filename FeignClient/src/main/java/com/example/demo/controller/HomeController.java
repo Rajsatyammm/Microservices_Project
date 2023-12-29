@@ -20,56 +20,68 @@ public class HomeController {
 	@Autowired
 	private GetEmployeesDetails getEmployees;
 
+	// index route
 	@GetMapping("/")
 	public String index() {
 		return "index";
 	}
 
+	// contact route
 	@GetMapping("/contact")
 	public String contactUs() {
 		return "contact";
 	}
 
+	// about route
 	@GetMapping("/about")
 	public String aboutUs() {
 		return "about";
 	}
 
+	// getInTouch route after submitting contact-us form
 	@PostMapping("/getintouch")
 	public String submitContactUSPage() {
 		return "getInTouch";
 	}
 
+	// logout route
 	@GetMapping("/logout")
 	public String logout() {
 		return "index";
 	}
 
+	// employee-login route
 	@GetMapping("/employee-login")
 	public String employeeLogin() {
 		return "employee-login";
 	}
 
+	// add employee route
+//	@PreAuthorize("hasRole('ADMIN')")
 	@GetMapping("/admin/add")
 	public String addEmployee() {
 		return "addEmployee";
 	}
 
+	// update employee route
 	@GetMapping("/admin/update")
 	public String updateEmployee() {
 		return "updateEmployee";
 	}
 
+	// delete employee route
 	@GetMapping("/admin/delete")
 	public String deleteEmployee() {
 		return "deleteEmployee";
 	}
 
+	// admin login route
 	@GetMapping("/admin-login")
 	public String adminLogin() {
 		return "admin-login";
 	}
 
+	// admin-dashboard after crud-pages route
 	@GetMapping("/admin/dashboard")
 	public String loadCRUDjsp(@ModelAttribute("employee") User employee) {
 		if ("ADMIN".equals(employee.getRole())) {

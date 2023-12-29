@@ -19,15 +19,29 @@ public class InsertNewEmployeeController {
 	@GetMapping("/add")
 	public String addEmployee(@RequestParam String name, @RequestParam String email, @RequestParam Float sal,
 			@RequestParam String addr) {
+		
+		// creating the new employee object
 		Employee employee = new Employee();
 
-		employee.setEadd(addr);
+		// setting the name to employee object
 		employee.setEname(name);
+		
+		// setting the email to employee object
 		employee.setEmail(email);
+		
+		// setting the address to employee object
+		employee.setEadd(addr);
+		
+		// setting the salary to employee object
 		employee.setEsal(sal);
+		
+		// setting the new employee role to EMPLOYEE Only
 		employee.setRole("EMPLOYEE");
-
+		
+		// saving the employee details to database
 		employeeRepository.save(employee);
+		
+		// returning the success message
 		return "success";
 	}
 }

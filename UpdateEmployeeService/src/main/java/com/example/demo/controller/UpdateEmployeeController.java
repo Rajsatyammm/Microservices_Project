@@ -20,20 +20,29 @@ public class UpdateEmployeeController {
 	public String updateEmployee(@RequestParam Integer eid, @RequestParam String name, @RequestParam String email,
 			@RequestParam Float sal, @RequestParam String addr) {
 
-		if (eid != null && employeeRepository.existsById(eid)) {
+		// if employee exist by id
+		if (employeeRepository.existsById(eid)) {
+			
+			// getting the employee from the database
 			Employee existingEmployee = employeeRepository.findById(eid).orElse(null);
 
 			if (existingEmployee != null) {
+				
+				// setting all the new values to the existing employee
 				existingEmployee.setEadd(addr);
 				existingEmployee.setEmail(email);
 				existingEmployee.setEname(name);
 				existingEmployee.setEsal(sal);
-
+				
+				// saving the new data to the database
 				employeeRepository.save(existingEmployee);
+				
+				// returning the success message
 				return "success";
 			}
 		}
-
+		
+		// if no data present in the database by id then returning failure message
 		return "failure";
 	}
 }

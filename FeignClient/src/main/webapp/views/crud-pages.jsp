@@ -8,7 +8,66 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Admin-Dashboard</title>
+<style>
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f2f2f2;
+}
 
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 15px;
+	text-align: center;
+}
+
+nav {
+	background-color: #555;
+	overflow: hidden;
+}
+
+nav a {
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 40%;
+}
+
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+</style>
 </head>
 
 <body>
@@ -19,35 +78,34 @@
 
 	<header>
 		<h1>
-			Welcome
+			Welcome 
 			<%=employee.getEname()%></h1>
 	</header>
 
 	<nav>
-		<a href="/">Home</a> <a href="/admin/add">Add Employee</a> <a
-			href="/admin/delete">Delete Employee</a> <a href="/admin/update">Update
-			Employee</a> <a href="/admin/list-emp">Get Employee</a> <a
-			href="/admin/list-all">Get All Employees</a> <a href="/logout">Logout</a>
+		<a href="/">Home</a>
+		<a href="/admin/add">Add Employee</a>
+		<a href="/admin/delete">Delete Employee</a>
+		<a href="/admin/update">Update Employee</a> 
+		<a href="/admin/list-emp">Get Employee</a> 
+		<a href="/admin/list-all">Get All Employees</a> 
+		<a href="/logout">Logout</a>
 	</nav>
-
-
-	<h2>Admin Details:</h2>
-	<p>
-		<strong>Name:</strong>
-		<%=employee.getEname()%></p>
-	<p>
-		<strong>Email:</strong>
-		<%=employee.getEmail()%></p>
-	<p>
-		<strong>Address:</strong>
-		<%=employee.getEadd()%></p>
-
-
-
+	
+	<div class="flex">
+	    <section>
+	        <h2>Admin Details:</h2>
+	        <p><strong>Name:</strong> <%= employee.getEname() %></p>
+	        <p><strong>Email:</strong> <%= employee.getEmail() %></p>
+	        <p><strong>Address:</strong> <%= employee.getEadd() %></p>
+	    </section>
+    </div>
+	
+	
 
 
 	<footer>
-		<p>&copy; 2023 Employee Management System. All rights reserved.</p>
+		<p>&copy; 2023 @Satyam-Raj Employee Management System. All rights reserved.</p>
 	</footer>
 
 </body>

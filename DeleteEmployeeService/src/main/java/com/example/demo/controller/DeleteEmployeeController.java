@@ -17,10 +17,16 @@ public class DeleteEmployeeController {
 
     @GetMapping("/delete")
     public String deleteEmployee(@RequestParam Integer eid) {
+    	// if the employee id exist in database
         if (employeeRepository.existsById(eid)) {
+        	
+        	// delete the employee
             employeeRepository.deleteById(eid); 
+            
+            // returning success message
             return "success";
         } else {
+        	// returning failure message
             return "failure";
         }
     }
